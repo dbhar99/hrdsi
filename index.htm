@@ -2,9 +2,9 @@
 <html lang="as">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>কৃত্ৰিম বুদ্ধিমত্তা (AI) - অসমীয়াত সম্পূৰ্ণ পাঠ্যক্ৰম</title>
+<title>কৃত্ৰিম বুদ্ধিমত্তা (AI) পাঠ্যক্ৰম</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;700;800&display=swap" rel="stylesheet">
 
@@ -17,138 +17,79 @@ box-sizing:border-box;
 font-family:'Noto Sans Bengali',sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
-
-background:linear-gradient(-45deg,#0f172a,#111827,#1e3a8a,#4f46e5);
-background-size:400% 400%;
-animation:bg 12s ease infinite;
-color:white;
+background:#f6f8fb;
+color:#222;
 line-height:1.7;
-
-}
-
-@keyframes bg{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
-
-.container{
-width:92%;
-max-width:1100px;
-margin:auto;
-}
-
-section{
-padding:70px 0;
 }
 
 .hero{
-text-align:center;
-padding-top:90px;
-}
 
-.badge{
-display:inline-block;
-padding:8px 20px;
-background:#10b981;
-border-radius:50px;
-font-weight:bold;
-margin-bottom:25px;
+background:linear-gradient(135deg,#005bea,#00c6fb);
+color:white;
+padding:70px 20px;
+text-align:center;
 }
 
 .hero h1{
-
 font-size:42px;
 font-weight:800;
 margin-bottom:25px;
-line-height:1.3;
-
 }
 
 .hero p{
-
 font-size:22px;
-opacity:.9;
-margin-bottom:20px;
-
+max-width:900px;
+margin:auto;
 }
 
-.book{
-
-max-width:320px;
-width:100%;
-border-radius:18px;
-box-shadow:0 30px 60px rgba(0,0,0,.4);
-margin:40px auto;
-
+.container{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
 }
 
-.btn{
+.card{
 
-display:inline-block;
-padding:18px 40px;
-background:#f97316;
-color:white;
-text-decoration:none;
-font-size:22px;
-font-weight:bold;
-border-radius:60px;
-transition:.3s;
-margin:10px;
-
-}
-
-.btn:hover{
-transform:translateY(-5px);
-background:#ea580c;
-}
-
-.glass{
-
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(15px);
+background:white;
+padding:40px;
 border-radius:20px;
-padding:35px;
-margin:25px 0;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+margin-bottom:40px;
 
+animation:fadeUp .8s ease;
 }
 
 h2{
 
 font-size:34px;
 margin-bottom:25px;
-text-align:center;
+color:#005bea;
 
 }
 
 ul{
-padding-left:22px;
+
+padding-left:25px;
+
 }
 
 li{
 margin-bottom:12px;
-}
-
-.cards{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-
-}
-
-.card{
-
-background:rgba(255,255,255,.08);
-padding:30px;
-border-radius:20px;
-
+font-size:20px;
 }
 
 .price{
 
 text-align:center;
+background:linear-gradient(135deg,#ff416c,#ff4b2b);
+color:white;
+padding:60px 20px;
+border-radius:20px;
 
 }
 
@@ -156,33 +97,61 @@ text-align:center;
 
 font-size:28px;
 text-decoration:line-through;
-opacity:.6;
+opacity:.8;
 
 }
 
 .new{
 
 font-size:60px;
-font-weight:800;
-color:#facc15;
+font-weight:bold;
+margin:15px 0;
 
 }
 
 .save{
 
 font-size:24px;
-color:#4ade80;
-margin-bottom:20px;
 
 }
 
-.sticky{
+.btn{
 
-position:fixed;
-bottom:20px;
-left:50%;
-transform:translateX(-50%);
-z-index:999;
+display:inline-block;
+margin-top:35px;
+background:#00c853;
+color:white;
+padding:18px 40px;
+border-radius:50px;
+text-decoration:none;
+font-size:22px;
+font-weight:bold;
+transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:scale(1.05);
+
+}
+
+.module{
+
+background:white;
+border-left:8px solid #005bea;
+padding:30px;
+border-radius:15px;
+margin-bottom:30px;
+box-shadow:0 5px 15px rgba(0,0,0,.06);
+
+}
+
+.module h3{
+
+color:#005bea;
+margin-bottom:20px;
+font-size:28px;
 
 }
 
@@ -190,25 +159,60 @@ z-index:999;
 
 position:fixed;
 right:20px;
-bottom:100px;
-width:65px;
-height:65px;
-border-radius:50%;
+bottom:20px;
 background:#25D366;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-text-decoration:none;
 color:white;
+padding:18px 25px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+font-size:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+.sticky{
+
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#005bea;
+padding:15px;
+text-align:center;
+z-index:999;
+
+}
+
+.sticky a{
+
+color:white;
+text-decoration:none;
+font-size:22px;
+font-weight:bold;
 
 }
 
 footer{
 
+background:#111;
+color:white;
 text-align:center;
 padding:40px;
-opacity:.8;
+
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(50px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
 
 }
 
@@ -228,7 +232,19 @@ font-size:18px;
 
 .new{
 
-font-size:42px;
+font-size:45px;
+
+}
+
+h2{
+
+font-size:28px;
+
+}
+
+li{
+
+font-size:18px;
 
 }
 
@@ -240,274 +256,195 @@ font-size:42px;
 
 <body>
 
-<div class="container">
-
 <section class="hero">
 
-<div class="badge">
-অসমীয়াত সম্পূৰ্ণ AI পাঠ্যক্ৰম
-</div>
-
-<h1>
-
-কৃত্ৰিম বুদ্ধিমত্তা (এ-আই)ৰ জৰিয়তে
-<br>
-ঘৰতে বহি
-<br>
-হাতত থকা মোবাইলটোৰে বিশ্বজয় কৰক!
-
-</h1>
+<h1>🤖 কৃত্ৰিম বুদ্ধিমত্তা (AI)ৰ জৰিয়তে ঘৰতে বহি হাতত থকা মোবাইলটোৰে বিশ্বজয় কৰক!</h1>
 
 <p>
 
-এ-আইয়ে পৃথিৱীখন দ্ৰুতগতিত সলনি কৰি আছে।
+এ-আই অৰ্থাৎ কৃত্ৰিম বুদ্ধিমত্তাই পৃথিৱীখন দ্ৰুতগতিত সলনি কৰি আছে।<br><br>
+
+এ-আইৰ সৈতে বন্ধুত্ব গঢ়ক।<br>
+
+যুগৰ লগত নিজকে খাপ খুৱাই লওক, নহ'লে আপুনি পিছপৰি ৰ'ব।
 
 </p>
 
-<p>
-
-যুগৰ লগত নিজকে খাপ খুৱাই লওক,
-নহ'লে আপুনি পিছপৰি ৰ'ব।
-
-</p>
-
-<img src="YOUR_BOOK_IMAGE.jpg" class="book">
-
-<a href="YOUR_PAYMENT_LINK" class="btn">
-CLICK HERE FOR INSTANT DOWNLOAD
-</a>
+<a href="#buy" class="btn">📘 এতিয়াই আৰম্ভ কৰক</a>
 
 </section>
 
-<section class="glass">
-
-<h2>
-
-এই পাঠ্যক্ৰম কাৰ বাবে?
-
-</h2>
-
-<ul>
-
-<li>✔ শিক্ষাৰ্থী</li>
-
-<li>✔ শিক্ষক</li>
-
-<li>✔ অভিভাৱক</li>
-
-<li>✔ চাকৰিজীৱী</li>
-
-<li>✔ উদ্যোক্তা</li>
-
-<li>✔ ফ্ৰিলেঞ্চাৰ</li>
-
-<li>✔ প্ৰতিজন সচেতন নাগৰিক</li>
-
-<li>✔ ১২ বছৰৰ পৰা ৮০ বছৰলৈ</li>
-
-</ul>
-
-</section>
-
-<section>
-
-<h2>
-
-কি আছে এই পাঠ্যক্ৰমত?
-
-</h2>
-
-<div class="cards">
+<div class="container">
 
 <div class="card">
 
-<h3>
-
-🤖 AI-১
-
-</h3>
+<h2>📚 এই পাঠ্যক্ৰম কাৰ বাবে?</h2>
 
 <ul>
 
-<li>AI কি?</li>
+<li>✔ শিক্ষাৰ্থীৰ বাবে</li>
 
-<li>ChatGPT</li>
+<li>✔ শিক্ষকৰ বাবে</li>
 
-<li>Gemini</li>
+<li>✔ অভিভাৱকৰ বাবে</li>
 
-<li>Grammarly</li>
+<li>✔ চাকৰিজীৱীৰ বাবে</li>
 
-<li>Bing Image Creator</li>
+<li>✔ উদ্যোগী আৰু ফ্ৰিলেঞ্চাৰৰ বাবে</li>
 
-<li>AI Practical</li>
+<li>✔ প্ৰতিজন সচেতন নাগৰিকৰ বাবে</li>
 
-<li>AI Safety</li>
-
-<li>Future Preparation</li>
+<li>✔ ১২ বছৰীয়াৰ পৰা ৮০ বছৰীয়া—আটাইৰে বাবে</li>
 
 </ul>
 
 </div>
 
-<div class="card">
-
-<h3>
-
-🎨 AI-২
-
-</h3>
-
-<ul>
-
-<li>Prompt Engineering</li>
-
-<li>AI Images</li>
-
-<li>AI Video</li>
-
-<li>Creative Learning</li>
-
-<li>Important AI Tools</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-🗣 AI-৩
-
-</h3>
-
-<ul>
-
-<li>Spoken English</li>
-
-<li>AI Teacher</li>
-
-<li>Pronunciation</li>
-
-<li>Grammar</li>
-
-<li>Confidence Building</li>
-
-<li>Daily Conversation</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="glass price">
-
-<h2>
-
-আজিয়েই আৰম্ভ কৰক
-
-</h2>
+<div class="price" id="buy">
 
 <div class="old">
 
-তিনিখন কিতাপৰ মূল্য
-
-₹600
+তিনিখন কিতাপৰ মূল্যঃ ₹600
 
 </div>
 
 <div class="new">
 
-₹299
+আজিৰ ৰেহাই মূল্যঃ ₹299
 
 </div>
 
 <div class="save">
 
-আজিৰ বিশেষ ৰেহাই মূল্য
+🔥 সীমিত সময়ৰ অফাৰ
 
 </div>
 
-<a href="YOUR_PAYMENT_LINK" class="btn">
+<a class="btn" href="#">
 
-BUY NOW
+CLICK HERE FOR INSTANT DOWNLOAD
 
 </a>
 
-</section>
+</div>
 
-<section class="glass">
+<br><br>
 
-<h2>
+<h2 style="text-align:center;">📖 এই পাঠ্যক্ৰমত কি আছে?</h2>
 
-আপুনি কি লাভ কৰিব?
+<div class="module">
 
-</h2>
+<h3>📘 কৃত্ৰিম বুদ্ধিমত্তা-১ (আটাইৰে বাবে)</h3>
 
 <ul>
 
-<li>📘 তিনিটা সম্পূৰ্ণ AI Module</li>
+<li>এ-আই কি?</li>
 
-<li>📱 মোবাইলৰ জৰিয়তে Practical</li>
+<li>প্ৰতিদিনে আমি কেনেকৈ ইয়াৰ মুখামুখি হওঁ?</li>
 
-<li>🎯 Prompt Engineering</li>
+<li>এ-আইয়ে কেনেদৰে কাম কৰে (প্ৰেক্টিকেল)</li>
 
-<li>🎨 AI Image & Video Creation</li>
+<li>ChatGPT, Gemini, Bing Image Creator, Grammarly</li>
 
-<li>🗣 Spoken English using AI</li>
+<li>এ-আই আৰু আমাৰ ভৱিষ্যত</li>
 
-<li>📥 Instant Download</li>
+<li>এ-আইৰ সৈতে নিৰাপদে সহাৱস্থান</li>
 
-<li>♾ Lifetime Access</li>
+<li>এ-আইৰ সৈতে পঢ়া-শুনা</li>
+
+<li>ষ্টুডিঅ' পাৰ্টনাৰ</li>
+
+<li>ভৱিষ্যতৰ চাবিকাঠি</li>
 
 </ul>
 
-</section>
+</div>
 
-<section class="glass" style="text-align:center;">
+<div class="module">
 
-<h2>
+<h3>🎓 কৃত্ৰিম বুদ্ধিমত্তা-২</h3>
 
-WhatsApp Support
+<ul>
 
-</h2>
+<li>এ-আইৰ সৈতে সৃজনশীল যাত্ৰা</li>
 
-<p>
+<li>Prompt Engineering</li>
+
+<li>AI Image Generation</li>
+
+<li>AI Video Generation</li>
+
+<li>গুৰুত্বপূৰ্ণ AI Tools</li>
+
+</ul>
+
+</div>
+
+<div class="module">
+
+<h3>🎤 কৃত্ৰিম বুদ্ধিমত্তা-৩</h3>
+
+<ul>
+
+<li>AIৰ সহায়ত Spoken English</li>
+
+<li>Pocket Teacher</li>
+
+<li>Prompt Engineering</li>
+
+<li>Daily Conversation</li>
+
+<li>Pronunciation</li>
+
+<li>Vocabulary</li>
+
+<li>Grammar</li>
+
+<li>Confidence Building</li>
+
+<li>AI Tools</li>
+
+</ul>
+
+</div>
+
+<div class="card" style="text-align:center;">
+
+<h2>📱 WhatsApp Support</h2>
+
+<p style="font-size:24px;">
 
 প্ৰয়োজনবোধে WhatsApp কৰক
 
 </p>
 
-<h1>
+<h1 style="color:#25D366;">
 
 70020-89066
 
 </h1>
 
-</section>
-
-<footer>
-
-© Human Resource Dev. Society of India
-
-</footer>
+</div>
 
 </div>
 
-<a href="https://wa.me/917002089066" class="whatsapp">
+<footer>
 
-💬
+© 2026 Human Resource Dev. Society of India
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/917002089066">
+
+WhatsApp
 
 </a>
 
 <div class="sticky">
 
-<a href="YOUR_PAYMENT_LINK" class="btn">
+<a href="#buy">
 
-BUY NOW - ₹299
+🔥 ₹299 ত এতিয়াই ডাউনলোড কৰক
 
 </a>
 
