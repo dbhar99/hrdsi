@@ -1,306 +1,517 @@
 <!DOCTYPE html>
 <html lang="as">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>এ-আই পাঠ্যক্ৰম | অসমীয়া</title>
-  <meta name="description" content="অতি সহজ-সৰল অসমীয়াত এ-আই পাঠ্যক্ৰম। মোবাইলতেই শিকক, বিশ্বজয় কৰক।" />
-  <style>
-    :root{
-      --bg:#07111f;
-      --bg2:#0c1729;
-      --card:#101d33;
-      --text:#eaf2ff;
-      --muted:#b8c7e6;
-      --primary:#6ee7ff;
-      --primary2:#7c5cff;
-      --accent:#22c55e;
-      --danger:#ffcf5a;
-      --border:rgba(255,255,255,.10);
-      --shadow:0 18px 60px rgba(0,0,0,.35);
-      --radius:22px;
-      --max:1180px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans Assamese", "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(110,231,255,.16), transparent 30%),
-        radial-gradient(circle at top right, rgba(124,92,255,.14), transparent 28%),
-        linear-gradient(180deg, var(--bg), var(--bg2));
-      color:var(--text);
-      line-height:1.7;
-    }
+<title>কৃত্ৰিম বুদ্ধিমত্তা (AI) - অসমীয়াত সম্পূৰ্ণ পাঠ্যক্ৰম</title>
 
-    a{color:inherit; text-decoration:none}
-    .container{width:min(var(--max), calc(100% - 32px)); margin:0 auto}
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:14px 22px;
-      border-radius:999px;
-      font-weight:700;
-      border:1px solid var(--border);
-      transition:.25s ease;
-      cursor:pointer;
-      white-space:nowrap;
-    }
-    .btn:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
-    .btn-primary{
-      background:linear-gradient(135deg, var(--primary), var(--primary2));
-      color:#08111f;
-      border:none;
-    }
-    .btn-outline{background:rgba(255,255,255,.04)}
-    .badge{
-      display:inline-flex;
-      padding:8px 14px;
-      border-radius:999px;
-      background:rgba(255,255,255,.08);
-      border:1px solid var(--border);
-      color:var(--muted);
-      font-size:.95rem;
-    }
-    section{padding:84px 0}
-    .grid{display:grid; gap:24px}
-    .hero{
-      padding:34px 0 70px;
-      position:relative;
-      overflow:hidden;
-    }
-    .hero-wrap{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:34px;
-      align-items:center;
-      min-height:calc(100vh - 40px);
-    }
-    .hero h1{
-      font-size:clamp(2.2rem, 5vw, 4.8rem);
-      line-height:1.08;
-      margin:18px 0 18px;
-      letter-spacing:-.02em;
-    }
-    .hero p{
-      font-size:clamp(1.02rem, 1.6vw, 1.22rem);
-      color:var(--muted);
-      max-width:62ch;
-    }
-    .cta-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:28px}
-    .stats{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:14px;
-      margin-top:28px;
-    }
-    .stat{
-      padding:18px;
-      border-radius:18px;
-      background:rgba(255,255,255,.05);
-      border:1px solid var(--border);
-    }
-    .stat strong{display:block; font-size:1.3rem; margin-bottom:4px}
-    .hero-card{
-      background:linear-gradient(180deg, rgba(16,29,51,.92), rgba(11,20,36,.92));
-      border:1px solid var(--border);
-      border-radius:28px;
-      padding:26px;
-      box-shadow:var(--shadow);
-      position:relative;
-    }
-    .hero-card h3{margin:0 0 10px; font-size:1.4rem}
-    .price-box{
-      margin-top:18px;
-      padding:18px;
-      border-radius:18px;
-      background:rgba(255,255,255,.05);
-      border:1px solid var(--border);
-    }
-    .price-old{text-decoration:line-through; color:#ffb4b4}
-    .price-new{font-size:2rem; font-weight:800; color:var(--danger)}
-    .list{
-      margin:18px 0 0;
-      padding:0;
-      list-style:none;
-    }
-    .list li{
-      padding:10px 0;
-      border-bottom:1px dashed rgba(255,255,255,.10);
-      color:var(--muted);
-    }
-    .list li:last-child{border-bottom:none}
-    .section-title{
-      font-size:clamp(1.7rem, 3vw, 2.8rem);
-      margin:0 0 12px;
-    }
-    .section-sub{
-      color:var(--muted);
-      max-width:70ch;
-      margin:0 0 30px;
-    }
-    .cards{
-      grid-template-columns:repeat(3, 1fr);
-    }
-    .card{
-      background:rgba(255,255,255,.05);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:24px;
-      box-shadow:0 8px 30px rgba(0,0,0,.14);
-    }
-    .card h3{margin:0 0 10px}
-    .card p, .card li{color:var(--muted)}
-    .modules{
-      grid-template-columns:repeat(3, 1fr);
-    }
-    .module-head{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      margin-bottom:12px;
-    }
-    .num{
-      width:44px;height:44px;border-radius:14px;
-      display:grid;place-items:center;
-      background:linear-gradient(135deg, var(--primary), var(--primary2));
-      color:#05101f;
-      font-weight:900;
-      flex:none;
-    }
-    .module-title{margin:0}
-    .module-list{margin:0; padding-left:18px}
-    .module-list li{margin:8px 0; color:var(--muted)}
-    .pricing{
-      display:grid;
-      grid-template-columns:1fr;
-      place-items:center;
-    }
-    .pricing-box{
-      width:min(760px, 100%);
-      background:linear-gradient(180deg, rgba(16,29,51,.98), rgba(12,23,41,.98));
-      border:1px solid rgba(110,231,255,.22);
-      border-radius:30px;
-      padding:34px;
-      box-shadow:var(--shadow);
-      text-align:center;
-    }
-    .big-price{
-      font-size:clamp(2.5rem, 6vw, 4.4rem);
-      font-weight:900;
-      margin:8px 0 0;
-      color:var(--danger);
-    }
-    .whatsapp{
-      color:var(--primary);
-      font-weight:800;
-      word-break:break-word;
-    }
-    .faq{
-      grid-template-columns:repeat(2, 1fr);
-    }
-    details{
-      background:rgba(255,255,255,.05);
-      border:1px solid var(--border);
-      border-radius:18px;
-      padding:18px 20px;
-    }
-    details summary{
-      cursor:pointer;
-      font-weight:700;
-    }
-    footer{
-      padding:28px 0 44px;
-      color:var(--muted);
-      text-align:center;
-      border-top:1px solid rgba(255,255,255,.08);
-    }
-    .floating{
-      position:fixed;
-      right:18px;
-      bottom:18px;
-      z-index:20;
-      box-shadow:var(--shadow);
-    }
-    @media (max-width: 980px){
-      .hero-wrap, .cards, .modules, .faq{grid-template-columns:1fr}
-      .stats{grid-template-columns:1fr}
-      section{padding:68px 0}
-      .hero{padding-top:18px}
-    }
-  </style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Noto Sans Bengali',sans-serif;
+}
+
+body{
+
+background:linear-gradient(-45deg,#0f172a,#111827,#1e3a8a,#4f46e5);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+color:white;
+line-height:1.7;
+
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.container{
+width:92%;
+max-width:1100px;
+margin:auto;
+}
+
+section{
+padding:70px 0;
+}
+
+.hero{
+text-align:center;
+padding-top:90px;
+}
+
+.badge{
+display:inline-block;
+padding:8px 20px;
+background:#10b981;
+border-radius:50px;
+font-weight:bold;
+margin-bottom:25px;
+}
+
+.hero h1{
+
+font-size:42px;
+font-weight:800;
+margin-bottom:25px;
+line-height:1.3;
+
+}
+
+.hero p{
+
+font-size:22px;
+opacity:.9;
+margin-bottom:20px;
+
+}
+
+.book{
+
+max-width:320px;
+width:100%;
+border-radius:18px;
+box-shadow:0 30px 60px rgba(0,0,0,.4);
+margin:40px auto;
+
+}
+
+.btn{
+
+display:inline-block;
+padding:18px 40px;
+background:#f97316;
+color:white;
+text-decoration:none;
+font-size:22px;
+font-weight:bold;
+border-radius:60px;
+transition:.3s;
+margin:10px;
+
+}
+
+.btn:hover{
+transform:translateY(-5px);
+background:#ea580c;
+}
+
+.glass{
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+border-radius:20px;
+padding:35px;
+margin:25px 0;
+
+}
+
+h2{
+
+font-size:34px;
+margin-bottom:25px;
+text-align:center;
+
+}
+
+ul{
+padding-left:22px;
+}
+
+li{
+margin-bottom:12px;
+}
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.08);
+padding:30px;
+border-radius:20px;
+
+}
+
+.price{
+
+text-align:center;
+
+}
+
+.old{
+
+font-size:28px;
+text-decoration:line-through;
+opacity:.6;
+
+}
+
+.new{
+
+font-size:60px;
+font-weight:800;
+color:#facc15;
+
+}
+
+.save{
+
+font-size:24px;
+color:#4ade80;
+margin-bottom:20px;
+
+}
+
+.sticky{
+
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+z-index:999;
+
+}
+
+.whatsapp{
+
+position:fixed;
+right:20px;
+bottom:100px;
+width:65px;
+height:65px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+color:white;
+
+}
+
+footer{
+
+text-align:center;
+padding:40px;
+opacity:.8;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:30px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.new{
+
+font-size:42px;
+
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-wrap">
-        <div>
-          <span class="badge">মোবাইলৰেই শিকক • সহজ অসমীয়া • সম্পূৰ্ণ প্ৰ্যাক্টিকেল</span>
-          <h1>কৃত্ৰিম বুদ্ধিমত্তা (এ-আই)ৰ জৰিয়তে ঘৰতে বহি হাতত থকা মোবাইলটোৰে বিশ্বজয় কৰক!</h1>
-          <p>
-            এ-আই অৰ্থাৎ কৃত্ৰিম বুদ্ধিমত্তাই পৃথিৱীখন দ্ৰুতগতিত সলনি কৰিবলৈ ওলাইছে।
-            এ-আইৰ সৈতে বন্ধুত্ব গঢ়ক, যুগৰ লগত নিজকে খাপ খুৱাই লওক, আৰু সলনি হোৱা পৃথিৱীখনত আগুৱাই থাকক।
-          </p>
+<div class="container">
 
-          <div class="cta-row">
-            <a class="btn btn-primary" href="https://wa.me/917002089066?text=%E0%A6%8F-%E0%A6%86%E0%A6%87%20%E0%A6%AA%E0%A6%BE%E0%A6%A0%E0%A7%8D%E0%A6%AF%E0%A6%95%E0%A7%B0%E0%A7%8D%E0%A6%95%E0%A7%B0%20%E0%A6%AC%E0%A6%BF%E0%A6%B7%E0%A7%9F%E0%A7%87%20%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A6%BF%E0%A6%AC%E0%A6%BF%20%E0%A6%A6%E0%A6%BF%E0%A7%9F%E0%A6%BE%E0%A6%95" target="_blank">CLICK HERE For instant download</a>
-            <a class="btn btn-outline" href="#modules">পাঠ্যক্ৰম চাওক</a>
-          </div>
+<section class="hero">
 
-          <div class="stats">
-            <div class="stat"><strong>১২–৮০ বছৰ</strong><span>সকলৰে বাবে উপযোগী</span></div>
-            <div class="stat"><strong>৩ খন কিতাপ</strong><span>সম্পূৰ্ণ পেকেজ</span></div>
-            <div class="stat"><strong>মাত্ৰ ২৯৯ টকা</strong><span>আজিৰ ৰেহাই মূল্য</span></div>
-          </div>
-        </div>
+<div class="badge">
+অসমীয়াত সম্পূৰ্ণ AI পাঠ্যক্ৰম
+</div>
 
-        <div class="hero-card">
-          <h3>এই পাঠ্যক্ৰম কাৰ বাবে?</h3>
-          <ul class="list">
-            <li>শিক্ষাৰ্থীৰ বাবে</li>
-            <li>শিক্ষকৰ বাবে</li>
-            <li>অভিভাৱকৰ বাবে</li>
-            <li>চাকৰিজীৱীৰ বাবে</li>
-            <li>উদ্যোক্তা আৰু ফ্ৰিলেঞ্চাৰৰ বাবে</li>
-            <li>প্ৰতিজন সচেতন নাগৰিকৰ বাবে</li>
-          </ul>
+<h1>
 
-          <div class="price-box">
-            <div>তিনিখন কিতাপৰ মূল্য</div>
-            <div class="price-old">৬০০ টকা</div>
-            <div>আজিৰ ৰেহাই মূল্য</div>
-            <div class="price-new">২৯৯ টকা মাত্ৰ</div>
-          </div>
-        </div>
-      </div>
-    </section>
+কৃত্ৰিম বুদ্ধিমত্তা (এ-আই)ৰ জৰিয়তে
+<br>
+ঘৰতে বহি
+<br>
+হাতত থকা মোবাইলটোৰে বিশ্বজয় কৰক!
 
-    <section id="modules">
-      <div class="container">
-        <h2 class="section-title">কি আছে এই পাঠ্যক্ৰমত?</h2>
-        <p class="section-sub">(তিনিটা মডিউলত সম্পূৰ্ণ এ-আই!)</p>
+</h1>
 
-        <div class="grid modules">
-          <article class="card">
-            <div class="module-head">
-              <div class="num">১</div>
-              <h3 class="module-title">কৃত্ৰিম বুদ্ধিমত্তা-১</h3>
-            </div>
-            <ul class="module-list">
-              <li>কৃত্ৰিম বুদ্ধিমত্তা (এ-আই) কি?</li>
-              <li>প্ৰতিদিনে আমি কেনেকৈ ইয়াৰ মুখামুখি হওঁ?</li>
-              <li>এ-আইয়ে কেনেদৰে কাম কৰে (ফোনত প্ৰেক্টিকেল)</li>
-              <li>ChatGPT, Gemini, Bing Image Creator, Grammarly ইত্যাদি</li>
-              <li>এ-আই আৰু আমাৰ ভৱিষ্যত</li>
-              <li>এ-আইৰ সৈতে নিৰাপদে সহাৱস্থান কৰাৰ কৌশল</li>
-            </ul>
-          </article>
+<p>
 
-          <article class="card">
-            <div class="module-head">
-              <div 
+এ-আইয়ে পৃথিৱীখন দ্ৰুতগতিত সলনি কৰি আছে।
+
+</p>
+
+<p>
+
+যুগৰ লগত নিজকে খাপ খুৱাই লওক,
+নহ'লে আপুনি পিছপৰি ৰ'ব।
+
+</p>
+
+<img src="YOUR_BOOK_IMAGE.jpg" class="book">
+
+<a href="YOUR_PAYMENT_LINK" class="btn">
+CLICK HERE FOR INSTANT DOWNLOAD
+</a>
+
+</section>
+
+<section class="glass">
+
+<h2>
+
+এই পাঠ্যক্ৰম কাৰ বাবে?
+
+</h2>
+
+<ul>
+
+<li>✔ শিক্ষাৰ্থী</li>
+
+<li>✔ শিক্ষক</li>
+
+<li>✔ অভিভাৱক</li>
+
+<li>✔ চাকৰিজীৱী</li>
+
+<li>✔ উদ্যোক্তা</li>
+
+<li>✔ ফ্ৰিলেঞ্চাৰ</li>
+
+<li>✔ প্ৰতিজন সচেতন নাগৰিক</li>
+
+<li>✔ ১২ বছৰৰ পৰা ৮০ বছৰলৈ</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>
+
+কি আছে এই পাঠ্যক্ৰমত?
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+
+🤖 AI-১
+
+</h3>
+
+<ul>
+
+<li>AI কি?</li>
+
+<li>ChatGPT</li>
+
+<li>Gemini</li>
+
+<li>Grammarly</li>
+
+<li>Bing Image Creator</li>
+
+<li>AI Practical</li>
+
+<li>AI Safety</li>
+
+<li>Future Preparation</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+🎨 AI-২
+
+</h3>
+
+<ul>
+
+<li>Prompt Engineering</li>
+
+<li>AI Images</li>
+
+<li>AI Video</li>
+
+<li>Creative Learning</li>
+
+<li>Important AI Tools</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+🗣 AI-৩
+
+</h3>
+
+<ul>
+
+<li>Spoken English</li>
+
+<li>AI Teacher</li>
+
+<li>Pronunciation</li>
+
+<li>Grammar</li>
+
+<li>Confidence Building</li>
+
+<li>Daily Conversation</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="glass price">
+
+<h2>
+
+আজিয়েই আৰম্ভ কৰক
+
+</h2>
+
+<div class="old">
+
+তিনিখন কিতাপৰ মূল্য
+
+₹600
+
+</div>
+
+<div class="new">
+
+₹299
+
+</div>
+
+<div class="save">
+
+আজিৰ বিশেষ ৰেহাই মূল্য
+
+</div>
+
+<a href="YOUR_PAYMENT_LINK" class="btn">
+
+BUY NOW
+
+</a>
+
+</section>
+
+<section class="glass">
+
+<h2>
+
+আপুনি কি লাভ কৰিব?
+
+</h2>
+
+<ul>
+
+<li>📘 তিনিটা সম্পূৰ্ণ AI Module</li>
+
+<li>📱 মোবাইলৰ জৰিয়তে Practical</li>
+
+<li>🎯 Prompt Engineering</li>
+
+<li>🎨 AI Image & Video Creation</li>
+
+<li>🗣 Spoken English using AI</li>
+
+<li>📥 Instant Download</li>
+
+<li>♾ Lifetime Access</li>
+
+</ul>
+
+</section>
+
+<section class="glass" style="text-align:center;">
+
+<h2>
+
+WhatsApp Support
+
+</h2>
+
+<p>
+
+প্ৰয়োজনবোধে WhatsApp কৰক
+
+</p>
+
+<h1>
+
+70020-89066
+
+</h1>
+
+</section>
+
+<footer>
+
+© Human Resource Dev. Society of India
+
+</footer>
+
+</div>
+
+<a href="https://wa.me/917002089066" class="whatsapp">
+
+💬
+
+</a>
+
+<div class="sticky">
+
+<a href="YOUR_PAYMENT_LINK" class="btn">
+
+BUY NOW - ₹299
+
+</a>
+
+</div>
+
+</body>
+</html>
